@@ -1,1 +1,37 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Result</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>Quiz Result</h2>
+    <button onclick="goHome()">Home</button>
+</header>
+
+<div class="result-container">
+
+    <h2>Your Result</h2>
+
+    <h3 id="score"></h3>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/result.js"></script>
+
+<script>
+function goHome(){
+    window.location.href="home.html";
+}
+</script>
+
+</body>
+</html>
