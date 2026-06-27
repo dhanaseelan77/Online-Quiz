@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>Online Quiz</h2>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<div class="quiz-container">
+
+    <h2 id="categoryTitle">Quiz</h2>
+
+    <div id="timer">Time Left: 60s</div>
+
+    <form id="quizForm">
+
+        <div id="questions"></div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+
+    </form>
+
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/quiz.js"></script>
+
+<script>
+if(localStorage.getItem("login")!="true"){
+    window.location="index.html";
+}
+
+function logout(){
+    localStorage.removeItem("login");
+    localStorage.removeItem("category");
+    window.location="index.html";
+}
+</script>
+
+</body>
+</html>
